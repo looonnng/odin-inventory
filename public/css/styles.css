@@ -62,13 +62,19 @@ header {
   height: 42px;
 }
 
-header nav {
-  justify-content: space-between;
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  padding-block: 0.5rem;
 }
 
 .nav-list {
   gap: 1rem;
   font-size: 1.25rem;
+}
+
+.nav-right {
+  justify-content: flex-end;
 }
 
 .nav-item {

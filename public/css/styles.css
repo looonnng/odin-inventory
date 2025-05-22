@@ -38,6 +38,10 @@ a {
   color: inherit;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 .flex {
   display: flex;
 }
@@ -113,4 +117,45 @@ header {
 
 .cta-wrapper a:hover {
   border: 2px solid var(--color-darker);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.nav-sort {
+  margin-block: 2rem;
+  border-bottom: 2px solid var(--color-dark-default);
+}
+
+.sort-list {
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--color-darker);
+}
+
+.card-img img {
+  width: 100%;
+}
+
+.card-info {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.card-title {
+  margin-bottom: 1rem;
+}
+
+.card-price {
+  margin-left: auto;
+}
+
+.card-description {
+  line-height: 1.5;
+  color: var(--color-light-default);
 }

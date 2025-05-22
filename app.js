@@ -15,7 +15,8 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 // parse request bodies (req.body)
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', indexRouter);
+// load router module
+app.use('/', indexRouter);
 
 const PORT = process.env.PORT || 8080;
 

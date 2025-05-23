@@ -2,11 +2,11 @@ const indexGet = (req, res) => {
   res.render('index', { title: 'Home' });
 };
 
-const productsGet = (req, res) => {
-  res.render('productsPage', { title: 'Products' });
+const guitarsGet = (req, res) => {
+  res.render('guitars', { title: 'Guitars' });
 };
 
 module.exports = {
   indexGet,
-  productsGet,
+  guitarsGet,
 };

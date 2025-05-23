@@ -3,6 +3,6 @@ const  indexController  = require('../controllers/indexController');
 const indexRouter = Router();
 
 indexRouter.get('/', indexController.indexGet);
-indexRouter.get('/products', indexController.productsGet)
+indexRouter.get('/guitars', indexController.guitarsGet)
 
 module.exports = indexRouter;

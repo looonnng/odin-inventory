@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/public/css/styles.css" />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <section class="wrapper">
+      <h1><%= title %></h1>
+      <div class="cards-container">
+        <% shapes.forEach(shape => { %>
+        <a href="#" class="card">
+          <div class="card-img">
+            <img
+              src="/public/images/guitar-shapes/<%= shape.shape.replace(' ', '-') %>.jpg"
+              alt="<%= shape.shape %>"
+            />
+          </div>
+          <div class="card-info">
+            <h1><%= shape.shape.toUpperCase() %></h1>
+          </div>
+        </a>
+        <% }) %>
+      </div>
+    </section>
+  </body>
+</html>

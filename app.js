@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const indexRouter = require('./routes/indexRouter');
+const guitarRouter = require('./routes/guitarRouter');
+const shapeRouter = require('./routes/shapeRouter');
 const app = express();
 
 // set default template engine
@@ -17,6 +19,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // load router module
 app.use('/', indexRouter);
+app.use('/guitars', guitarRouter);
+app.use('/shapes', shapeRouter);
 
 const PORT = process.env.PORT || 8080;
 

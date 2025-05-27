@@ -6,6 +6,8 @@ const indexRouter = Router();
 
 // indexRouter.get('/getAllGuitars', indexController.indexGetAll);
 indexRouter.get('/', indexController.indexGet);
+indexRouter.get('/add', indexController.addNewGet);
+indexRouter.post('/add', indexController.addNewPost);
 indexRouter.get('/guitars', indexController.guitarsGet);
 indexRouter.get('/guitars/:brand', guitarRouter);
 indexRouter.get('/:brand/:guitarName', guitarRouter);

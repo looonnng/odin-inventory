@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/public/css/styles.css" />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <section class="wrapper">
+      <h1><%= title %></h1>
+      <form class="form-add" action="/add" method="post">
+        <ul>
+          <li>
+            <label for="guitarName">Name:</label>
+            <input type="text" name="guitarName" id="guitarName" required />
+          </li>
+          <li>
+            <label for="guitarBrand">Brand:</label>
+            <select type="text" name="guitarBrand" id="guitarBrand" required>
+              <option value="" disabled>Select Brand</option>
+              <option value="fender">fender</option>
+              <option value="gibson">gibson</option>
+              <option value="esp">esp</option>
+              <option value="epiphone">epiphone</option>
+            </select>
+          </li>
+          <li>
+            <select type="text" name="guitarShape" id="guitarShape" required>
+              <option value="" disabled>Select Shape</option>
+              <option value="telecaster">telecaster</option>
+              <option value="stratocaster">stratocaster</option>
+              <option value="les paul">les paul</option>
+              <option value="sg">sg</option>
+            </select>
+          </li>
+        </ul>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>

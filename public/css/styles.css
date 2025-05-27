@@ -121,7 +121,7 @@ header {
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
 }
 
@@ -141,6 +141,8 @@ header {
 
 .card-img img {
   width: 100%;
+  max-height: 400px;
+  object-fit: contain;
   border: 1px solid var(--color-dark-default);
 }
 
@@ -163,5 +165,5 @@ header {
 }
 
 .guitar-wrapper {
- max-width: 450px; 
+  max-width: 450px;
 }

@@ -11,6 +11,7 @@ indexRouter.post('/add', indexController.addNewPost);
 indexRouter.get('/guitars', indexController.guitarsGet);
 indexRouter.get('/guitars/:brand', guitarRouter);
 indexRouter.get('/:brand/:guitarName', guitarRouter);
+indexRouter.post('/:brand/:guitarName', guitarRouter);
 indexRouter.get('/shapes', shapeRouter);
 
 module.exports = indexRouter;

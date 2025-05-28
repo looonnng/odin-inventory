@@ -38,9 +38,19 @@ async function addNewGuitar(brand, guitarName, shape) {
       guitarName,
       brand,
       shape,
-      `/public/images/guitars/new-guitar/${shape.replaceAll(' ', '-')}-outline.jpg`,
+      `/public/images/guitars/new-guitar/${shape.replaceAll(
+        ' ',
+        '-',
+      )}-outline.jpg`,
     ],
   );
+}
+
+async function deleteGuitar(brand, guitarName) {
+  await pool.query('DELETE FROM guitars WHERE brand = $1 AND name ~ $2', [
+    brand,
+    guitarName,
+  ]);
 }
 
 module.exports = {
@@ -50,4 +60,5 @@ module.exports = {
   getAllBrandProducts,
   getGuitar,
   addNewGuitar,
+  deleteGuitar,
 };

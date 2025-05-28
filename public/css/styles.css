@@ -167,3 +167,20 @@ header {
 .guitar-wrapper {
   max-width: 450px;
 }
+
+dialog {
+  z-index: 10;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-confirm-delete {
+  padding: 0.5rem;
+}
+
+.invisible {
+  visibility: hidden;
+}

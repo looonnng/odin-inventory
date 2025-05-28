@@ -19,7 +19,18 @@
           <div class="card-info">
             <h1><%= guitar.name.toUpperCase() %></h1>
           </div>
+          <dialog>
+            <form class="form-confirm-delete" action="<% guitar.name %>" method="post">
+              <p>Are you sure?</p>
+              <input type="password" required name='confirmPassword' id="confirmPassword">
+              <button class="close" autofocus>Cancel</button>
+              <button class="confirm">Confirm</button>
+            </form>
+          </dialog>
+          <button class="show" >Delete</button>
         </div>
+
     </section>
   </body>
+  <script src="/public/js/handleDialog.js"></script>
 </html>
